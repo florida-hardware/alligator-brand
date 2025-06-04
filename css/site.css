@@ -1,0 +1,30 @@
+
+body {
+    background: #ccc;
+}
+
+#wrap {
+    background: #fefefe;
+    max-width: 1320px;
+    margin:auto;
+    padding: 1em 0;
+}
+
+.navbar {
+    font-weight: bold;
+    font-variant-caps: all-small-caps;
+    border: 1px solid #ddd;
+    margin: 1em 0;
+
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.dropdown:focus-within > .dropdown-menu { display:block; }
+
+li.breadcrumb-item a { text-decoration: none; }
+li.breadcrumb-item.active a { color: #333; }
+
+/* Mobile */
+@media (max-width: 991px) {
+    ol.breadcrumb {display:none;}
+}
