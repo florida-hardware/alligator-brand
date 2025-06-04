@@ -1,0 +1,6 @@
+{
+    "port": 8887,
+    "rootpath": "www",
+    "mimetypes": "etc/mimetypes.json",
+    "secure": false
+}

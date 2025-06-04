@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{%init%}
+</head>
+<body>
+<div id="wrap">
+
+{%header%}
+
+
+<main class="container px-4 px-lg-5">
+    <div class="row text-center"><img src="/img/FHFE-Banner2.jpg"/></div>
+{%IF1 page.show_h1}
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb">
+            {%EACH page.breadcrumb}
+                <li class="breadcrumb-item {%IF active}active{%ENDIF}"><a href="{{link}}">{{title}}</a></li>
+            {%ENDEACH}
+        </ol></nav>
+        <h1>{{page.title}}</h1>
+    </div>
+{%ENDIF1}
+
+<div class="row">
+    
+    <div class="col-4">
+        <img src="/img/prod/{{page.product.sku}}.jpg"/>
+    </div>
+
+    <div class="col-8">
+        <p>{{page.product.content}}</p>
+
+        {%IF2 page.product.bullets}<ul>
+        {%EACH page.product.bullets}
+        <li>{{value}}</li>
+        {%ENDEACH}
+        </ul>{%ENDIF2}
+    </div>
+</div>
+
+</main>
+</div>
+
+{%footer%}
+{%exit%}
+</body>
+</html>
